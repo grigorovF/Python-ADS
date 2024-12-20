@@ -6,8 +6,7 @@ class SinglyLinkedListNode:
 class SinglyLinkedList:
     def __init__(self):
         self.head = None
-        self.tail = None
-        
+               
 
     def insertNode(self, coins):
         nodeData = SinglyLinkedListNode(coins)
@@ -15,9 +14,10 @@ class SinglyLinkedList:
         if not self.head:
             self.head = nodeData
         else:
-            self.tail.next = nodeData
-
-        self.tail = nodeData
+            current = self.head
+            while current.next:
+                current = current.next
+            current.next = nodeData
 
 def getMinimumCoins(avilableCoins, totalSum):
     result = []
