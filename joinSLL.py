@@ -64,8 +64,6 @@ list2 = SLL()
 for value in values2:
     list2.insertData(int(value)) 
 
-    # Merge the two lists
 merged_list = mergedSLL(list1, list2)
 
-    # Output the merged list
 print("Merged list:", merged_list.toList())
